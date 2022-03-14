@@ -25,7 +25,13 @@
     "windowMask": false
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "score",
+      "type": "string",
+      "value": "0"
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -144,6 +150,22 @@
           "value": ""
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "playerScore",
+      "persistentUuid": "de67e7c4-8de5-4e13-b259-1aa3cccf08a2",
+      "width": 0,
+      "x": 507,
+      "y": 21,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -346,6 +368,26 @@
           ]
         }
       ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "playerScore",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Score: 0",
+      "font": "",
+      "characterSize": 60,
+      "color": {
+        "b": 204,
+        "g": 218,
+        "r": 18
+      }
     }
   ],
   "events": [
@@ -564,6 +606,39 @@
           "parameters": [
             "nextButton",
             ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "score",
+            "+",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "playerScore",
+            "=",
+            "\"Score: \" + VariableString(score)"
           ],
           "subInstructions": []
         }
