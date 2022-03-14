@@ -109,19 +109,41 @@
     },
     {
       "angle": 0,
+      "customSize": true,
+      "height": 131,
+      "layer": "",
+      "locked": false,
+      "name": "timer2",
+      "persistentUuid": "1aff98f3-f13f-4ab8-93da-b4c863be600f",
+      "width": 81,
+      "x": 322,
+      "y": 260,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "timer",
-      "persistentUuid": "c5315681-4c61-4ec8-97d6-579f72cb4cea",
+      "name": "nextButton",
+      "persistentUuid": "14a5f2c4-e370-4bb8-a172-dff985a742a8",
       "width": 0,
-      "x": 526,
-      "y": 498,
-      "zOrder": 6,
+      "x": 663,
+      "y": 485,
+      "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "name": "Variable",
+          "type": "string",
+          "value": ""
+        }
+      ]
     }
   ],
   "objects": [
@@ -188,7 +210,7 @@
     {
       "bold": false,
       "italic": false,
-      "name": "q1choose3",
+      "name": "q1choose1",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
@@ -196,7 +218,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "3) The Joker",
+      "string": "1) Spider-Ham",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -228,7 +250,7 @@
     {
       "bold": false,
       "italic": false,
-      "name": "q1choose1",
+      "name": "q1choose3",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
@@ -236,7 +258,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "1) Spider-Ham",
+      "string": "3) The Joker",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -258,11 +280,11 @@
       "behaviors": [],
       "string": "3",
       "font": "",
-      "characterSize": 50,
+      "characterSize": 110,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -284,9 +306,141 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "name": "nextButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewSprite-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"timer2\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"timer\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "question1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "q1choose3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "q1choose2"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "q1choose1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "nextButton"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
     {
       "disabled": false,
       "folded": false,
@@ -401,6 +555,17 @@
             "\"20;197;12\""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "nextButton",
+            ""
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -468,37 +633,6 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"timer\""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
         {
@@ -554,31 +688,8 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"timer2\""
-          ],
-          "subInstructions": []
-        }
-      ],
+      "conditions": [],
+      "actions": [],
       "events": []
     },
     {
@@ -595,7 +706,7 @@
           "parameters": [
             "timer2",
             "=",
-            "ToString(round(abs(TimerElapsedTime(\"timer\")-10)))"
+            "ToString(round(abs(TimerElapsedTime(\"timer2\")-3)))"
           ],
           "subInstructions": []
         }
@@ -630,6 +741,152 @@
           "parameters": [
             "",
             "\"timer2\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "question1",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "q1choose3",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "q1choose2",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "q1choose1",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "timer2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseButtonReleased"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "nextButton",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "question1",
+            "=",
+            "\"What is the name of Tony Stark's hero identity?\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose1",
+            "=",
+            "\"1) Batman\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose2",
+            "=",
+            "\"2) Iron Man\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose3",
+            "=",
+            "\"3) The Flash\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "nextButton"
           ],
           "subInstructions": []
         }
