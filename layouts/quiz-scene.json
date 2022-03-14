@@ -30,6 +30,46 @@
       "name": "score",
       "type": "string",
       "value": "0"
+    },
+    {
+      "name": "sceneQuestionSet1",
+      "type": "string",
+      "value": "\"What is the name of Spider-Man's secret identity?\""
+    },
+    {
+      "name": "sceneAnswer1Set1",
+      "type": "string",
+      "value": "\"1) Spider-Ham\""
+    },
+    {
+      "name": "sceneAnswer2Set1",
+      "type": "string",
+      "value": "\"2) Peter Parker\""
+    },
+    {
+      "name": "sceneAnswer3Set1",
+      "type": "string",
+      "value": "\"3) The Joker\""
+    },
+    {
+      "name": "sceneQuestionSet2",
+      "type": "string",
+      "value": "\"What is the name of Tony Stark's superhero identity?\""
+    },
+    {
+      "name": "sceneAnswer2Set2",
+      "type": "string",
+      "value": "\"2) Iron Man\""
+    },
+    {
+      "name": "sceneAnswer3Set2",
+      "type": "string",
+      "value": "\"3) Batman\""
+    },
+    {
+      "name": "sceneAnswer1Set2",
+      "type": "string",
+      "value": "\"1) Spaceman\""
     }
   ],
   "instances": [
@@ -220,7 +260,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "What is the name of Spider-Man's secret identity?",
+      "string": "ready",
       "font": "",
       "characterSize": 40,
       "color": {
@@ -240,7 +280,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "1) Spider-Ham",
+      "string": "ready",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -260,7 +300,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "2) Peter Parker",
+      "string": "ready",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -280,7 +320,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "3) The Joker",
+      "string": "ready",
       "font": "",
       "characterSize": 35,
       "color": {
@@ -800,7 +840,7 @@
           },
           "parameters": [
             "",
-            "\"timer\"",
+            "\"timer2\"",
             ">=",
             "3"
           ],
@@ -811,7 +851,7 @@
         {
           "type": {
             "inverted": false,
-            "value": "PauseTimer"
+            "value": "RemoveTimer"
           },
           "parameters": [
             "",
@@ -872,6 +912,54 @@
             "timer2"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "question1",
+            "=",
+            "VariableString(sceneQuestionSet1)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose1",
+            "=",
+            "VariableString(sceneAnswer1Set1)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose2",
+            "=",
+            "VariableString(sceneAnswer2Set1)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "q1choose3",
+            "=",
+            "VariableString(sceneAnswer3Set1)"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -915,7 +1003,7 @@
           "parameters": [
             "question1",
             "=",
-            "\"What is the name of Tony Stark's hero identity?\""
+            "VariableString(sceneQuestionSet2)"
           ],
           "subInstructions": []
         },
@@ -927,7 +1015,7 @@
           "parameters": [
             "q1choose1",
             "=",
-            "\"1) Batman\""
+            "VariableString(sceneAnswer1Set2)"
           ],
           "subInstructions": []
         },
@@ -939,7 +1027,7 @@
           "parameters": [
             "q1choose2",
             "=",
-            "\"2) Iron Man\""
+            "VariableString(sceneAnswer2Set2)"
           ],
           "subInstructions": []
         },
@@ -951,7 +1039,7 @@
           "parameters": [
             "q1choose3",
             "=",
-            "\"3) The Flash\""
+            "VariableString(sceneAnswer3Set2)"
           ],
           "subInstructions": []
         },
