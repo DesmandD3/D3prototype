@@ -70,6 +70,106 @@
       "name": "sceneAnswer1Set2",
       "type": "string",
       "value": "\"1) Spaceman\""
+    },
+    {
+      "name": "sceneQuestionSet3",
+      "type": "string",
+      "value": "\"What is the name of Matt Murdock's law firm?\""
+    },
+    {
+      "name": "sceneAnswer2Set3",
+      "type": "string",
+      "value": "\"2) Nelson & Murdock\""
+    },
+    {
+      "name": "sceneAnswer3Set3",
+      "type": "string",
+      "value": "\"3) Daredevil At Law\""
+    },
+    {
+      "name": "sceneAnswer1Set3",
+      "type": "string",
+      "value": "\"1) Murdock & Johnson\""
+    },
+    {
+      "name": "sceneQuestionSet4",
+      "type": "string",
+      "value": "\"Which super villian wanted to erase half of all life in the universe?\""
+    },
+    {
+      "name": "sceneAnswer2Set4",
+      "type": "string",
+      "value": "\"2) Thanos\""
+    },
+    {
+      "name": "sceneAnswer3Set4",
+      "type": "string",
+      "value": "\"3) Dr. Doom\""
+    },
+    {
+      "name": "sceneAnswer1Set4",
+      "type": "string",
+      "value": "\"1) Mysterio\""
+    },
+    {
+      "name": "sceneQuestionSet5",
+      "type": "string",
+      "value": "\"Which cosmic realm does Thor call home?\""
+    },
+    {
+      "name": "sceneAnswer2Set5",
+      "type": "string",
+      "value": "\"2) Asgard\""
+    },
+    {
+      "name": "sceneAnswer3Set5",
+      "type": "string",
+      "value": "\"3) Hades\""
+    },
+    {
+      "name": "sceneAnswer1Set5",
+      "type": "string",
+      "value": "\"1) New York City\""
+    },
+    {
+      "name": "sceneQuestionSet6",
+      "type": "string",
+      "value": "\"This adamantium infused mutant named Logan is also known as...?\""
+    },
+    {
+      "name": "sceneAnswer2Set6",
+      "type": "string",
+      "value": "\"2) Wolverine\""
+    },
+    {
+      "name": "sceneAnswer3Set6",
+      "type": "string",
+      "value": "\"3) Cyclops\""
+    },
+    {
+      "name": "sceneAnswer1Set6",
+      "type": "string",
+      "value": "\"1) Storm\""
+    },
+    {
+      "name": "sceneQuestionSet7",
+      "type": "string",
+      "value": "\"Which mutant super villan is also know an The Master of Magnatisim?\""
+    },
+    {
+      "name": "sceneAnswer2Set7",
+      "type": "string",
+      "value": "\"2) Magneto\""
+    },
+    {
+      "name": "sceneAnswer3Set7",
+      "type": "string",
+      "value": "\"3) Venom\""
+    },
+    {
+      "name": "sceneAnswer1Set7",
+      "type": "string",
+      "value": "\"1) Dr Doom\""
     }
   ],
   "instances": [
